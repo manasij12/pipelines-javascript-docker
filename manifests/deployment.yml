@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: manasijpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manasijpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: manasijpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: manasijpipelinesjavascriptdocker 
+          image: mj0820registry.azurecr.io/manasijpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
